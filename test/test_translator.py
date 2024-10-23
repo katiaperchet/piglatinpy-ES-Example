@@ -50,3 +50,11 @@ class TestPigLatinTranslator(TestCase):
         translator = PigLatinTranslator("ink1")
         # Act and Assert
         self.assertRaises(PigLatinError, translator.translate)
+
+    def test_translate_word_start_consonant(self):
+        # Arrange
+        translator = PigLatinTranslator("hello")
+        # Act
+        translation = translator.translate()
+        # Assert
+        self.assertEqual("ellohay", translation)

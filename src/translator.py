@@ -28,6 +28,9 @@ class PigLatinTranslator:
         if self._phrase == "":
             return "nil"
         last_char = self._phrase[-1]
+        return self._translate_word_starting_vowel(last_char)
+
+    def _translate_word_starting_vowel(self, last_char: str) -> str:
         if last_char == "y":
             return self._phrase + "nay"
         if last_char in VOWEL:

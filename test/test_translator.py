@@ -2,6 +2,7 @@ from unittest import TestCase
 from src.translator import PigLatinTranslator
 from src.error import PigLatinError
 
+
 class TestPigLatinTranslator(TestCase):
 
     def test_get_phrase(self):
@@ -49,4 +50,3 @@ class TestPigLatinTranslator(TestCase):
         translator = PigLatinTranslator("ink1")
         # Act and Assert
         self.assertRaises(PigLatinError, translator.translate)
-

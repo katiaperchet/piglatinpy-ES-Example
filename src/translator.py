@@ -24,5 +24,9 @@ class PigLatinTranslator:
         """
         if self._phrase == "":
             return "nil"
-        return self._phrase + "nay"
+        lastchar= self._phrase[-1]
+        if lastchar == "y":
+            return self._phrase + "nay"
+        else:
+            return self._phrase + "yay"
 

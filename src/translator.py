@@ -1,5 +1,7 @@
 from src.error import PigLatinError
 
+VOWEL = "aeiou"
+
 
 class PigLatinTranslator:
     def __init__(self, phrase: str):
@@ -27,7 +29,7 @@ class PigLatinTranslator:
         last_char = self._phrase[-1]
         if last_char == "y":
             return self._phrase + "nay"
-        if last_char in "aeiou":
+        if last_char in VOWEL:
             return self._phrase + "yay"
         else:
             return self._phrase + "ay"

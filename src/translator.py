@@ -2,19 +2,20 @@ from src.error import PigLatinError
 
 
 class PigLatinTranslator:
-
     def __init__(self, phrase: str):
         """
         Creates a pig latin translator given a phrase.
         :param phrase: the phrase.
         :raise PigLatinError: for any error situation.
         """
+        self._phrase = phrase
 
     def get_phrase(self) -> str:
         """
         Returns the phrase.
         :return: the phrase.
         """
+        return self._phrase
 
     def translate(self) -> str:
         """
